@@ -4,6 +4,7 @@ import authRouter from "./modules/auth/auth.route";
 import inviteRouter from "./modules/invite/invite.route";
 import { config } from "./config/config";
 import userRouter from "./modules/user/user.route";
+import projectRoute from "./modules/project/project.route";
 
 const app = express();
 
@@ -19,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(
   cors({
-    origin: config.frontendUrl || "http://localhost:5173",
+    origin: config.frontendUrl,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
@@ -58,6 +59,12 @@ app.use("/api/v1", inviteRouter);
 
 
 app.use("/api/v1", userRouter);
+
+
+
+// project route 
+
+app.use("/api/v1",projectRoute);
 
 
 
