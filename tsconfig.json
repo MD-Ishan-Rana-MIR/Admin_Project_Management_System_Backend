@@ -16,7 +16,7 @@
     // and npm install -D @types/node
 
     // Other Outputs\
-        "typeRoots": ["./node_modules/@types", "./src/types"],
+    "typeRoots": ["./node_modules/@types", "./src/types"],
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
@@ -40,7 +40,7 @@
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
