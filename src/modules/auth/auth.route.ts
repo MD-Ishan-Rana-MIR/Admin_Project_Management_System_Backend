@@ -4,8 +4,9 @@ import { login, userCreate } from "./auth.controller";
 
 const authRouter = express.Router();
 
-authRouter.post("/create-user",userCreate);
-authRouter.post("/login",login);
+authRouter.post("/create-user", userCreate);
+
+authRouter.post("/auth/login", login);
 
 
 

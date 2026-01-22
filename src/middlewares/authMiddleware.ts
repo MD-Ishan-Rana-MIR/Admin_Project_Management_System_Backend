@@ -8,6 +8,7 @@ export const authMiddleware = (
 ) => {
   const authHeader = req.headers.authorization;
 
+
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
     return res.status(401).json({ message: "Unauthorized" });
   }
@@ -23,7 +24,7 @@ export const authMiddleware = (
 
   try {
     const decoded: JwtPayload = verifytoken(token);
-    console.log(req.header.bind,req.headers.role);
+    console.log(req.header.bind, req.headers.role);
     req.headers.id = decoded?.userId;
     req.headers.role = decoded.role;
 
