@@ -15,5 +15,5 @@ export const config : ConfigType = {
     db_url : String(process.env.DB_URL),
     jwtKey : String(process.env.JWT_SECRET) || "akdlfjdklahfkajsfhfuihfqewhirf",
     expreDay : String(process.env.EXPIRE_DAY) || "5d",
-    frontendUrl : String(process.env.WEBFRONTEND_URL_URL)
+    frontendUrl : String(process.env.FRONTEND_URLgit )
 }

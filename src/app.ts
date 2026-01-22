@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express";
 import authRouter from "./modules/auth/auth.route";
+import inviteRouter from "./modules/invite/invite.route";
 
 const app = express();
 
@@ -32,6 +33,11 @@ app.get("/", async (_req: Request, res: Response) => {
 // router 
 
 app.use("/api/v1",authRouter);
+
+
+// invite router 
+
+app.use("/api/v1",inviteRouter);
 
 
 

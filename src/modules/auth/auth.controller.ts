@@ -22,7 +22,7 @@ export const login = async (req:Request,res:Response)=>{
             return errorResponse(res,403,"Invalid credentials",null)
         }
         const token = generateToken({userId: user._id.toString(),role: user.role});
-        return successResponse(res,201,"Login successfully",{data : {token:token,id:user?._id,name:user?.name,role:user?.role,email:user?.email}})
+        return successResponse(res,201,"Login successfully",{token:token,id:user?._id,name:user?.name,role:user?.role,email:user?.email})
     }   
     catch (error) {
         console.log(error);

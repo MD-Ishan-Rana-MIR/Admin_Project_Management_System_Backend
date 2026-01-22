@@ -1,9 +1,6 @@
 import { Request, Response, NextFunction } from "express";
-import { verifytoken } from "../config/token";
-interface JwtPayload {
-  userId: string;
-  role: "ADMIN" | "MANAGER" | "STAFF";
-}
+import { verifytoken, JwtPayload } from "../config/token";
+
 export const authMiddleware = (
   req: Request,
   res: Response,
@@ -15,16 +12,20 @@ export const authMiddleware = (
     return res.status(401).json({ message: "Unauthorized" });
   }
 
-  const token  = authHeader.split(" ")[1];
+  const token = authHeader.split(" ")[1];
+
+  // -----------------------
+  // Narrow type for TS
+  // -----------------------
+  if (!token) {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
 
   try {
-    const decoded = verifytoken(token) as JwtPayload;
-
-    // attach user info to request
-    req.user = {
-      userId: decoded.userId,
-      role: decoded.role
-    };
+    const decoded: JwtPayload = verifytoken(token);
+    console.log(req.header.bind,req.headers.role);
+    req.headers.id = decoded?.userId;
+    req.headers.role = decoded.role;
 
     next();
   } catch (error) {

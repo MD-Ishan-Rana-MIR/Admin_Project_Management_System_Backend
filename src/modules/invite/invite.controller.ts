@@ -25,7 +25,7 @@ export const inviteUser = async (req:Request,res:Response)=>{
     // send email 
 
     await transporter.sendMail({
-      from: `"Spark Tech" <${process.env.EMAIL_USER}>`,
+      from: `<${process.env.EMAIL_USER}>`,
       to: email,
       subject: "You have been invited",
       html: inviteEmailTemplate(inviteLink, role),

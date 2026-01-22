@@ -1,6 +1,11 @@
 import jwt from "jsonwebtoken";
 import { config } from "./config";
-
+export interface JwtPayload {
+  userId: string;
+  role: "ADMIN" | "MANAGER" | "STAFF";
+  iat: number;
+  exp: number;
+}
 
 export const generateToken = (payload: {
   userId: string;
