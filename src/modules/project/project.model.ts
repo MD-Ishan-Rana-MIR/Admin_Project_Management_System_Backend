@@ -38,7 +38,7 @@ const projectSchema = new Schema<IProject>(
       required: true
     }
   },
-  { timestamps: true }
+  { timestamps: true,versionKey:false }
 );
 
 const projectModel = model<IProject>("Project", projectSchema);
