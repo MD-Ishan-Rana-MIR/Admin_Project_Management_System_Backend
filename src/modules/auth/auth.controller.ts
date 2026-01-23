@@ -39,4 +39,16 @@ export const userCreate = async (req: Request, res: Response) => {
         return errorResponse(res, 500, "Something went wrong", error);
 
     }
+};
+
+export const userProfile = async (req:Request,res:Response)=>{
+    try {
+        const id = req.headers.id;
+        const data = await userModel.findOne({_id:id}).select("-password");
+        return successResponse(res,200,"User profile retrive",data)
+        
+    } catch (error) {
+        return errorResponse(res,500,"Something went wrong",error);
+        
+    }
 }
