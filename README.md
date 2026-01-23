@@ -118,7 +118,7 @@ src/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/MD-Ishan-Rana-MIR/Admin_Project_Management_System_Backend
    cd Admin_Project_Management_System_Backend
    ```
 
@@ -188,7 +188,7 @@ This compiles TypeScript to JavaScript in the `dist/` folder and runs the compil
 ### Server URL
 Once running, the server will be available at:
 ```
-http://localhost:<PORT>
+https://admin-project-management-system-bac.vercel.app>
 ```
 Default: `https://admin-project-management-system-bac.vercel.app/api/v1`
 
