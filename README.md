@@ -190,7 +190,7 @@ Once running, the server will be available at:
 ```
 http://localhost:<PORT>
 ```
-Default: `http://localhost:5500`
+Default: `https://admin-project-management-system-bac.vercel.app/api/v1`
 
 ---
 
@@ -198,7 +198,7 @@ Default: `http://localhost:5500`
 
 ### Base URL
 ```
-http://localhost:5500/api/v1
+https://admin-project-management-system-bac.vercel.app/api/v1
 ```
 
 ### Available Endpoints
