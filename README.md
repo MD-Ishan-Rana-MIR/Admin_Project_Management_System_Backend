@@ -229,13 +229,12 @@ Authorization: Bearer <your-jwt-token>
 _(Add your Postman collection link here if available)_
 
 ### Swagger Documentation
-_(Add Swagger documentation link here if implemented)_
+_(https://documenter.getpostman.com/view/44769217/2sBXVkCAGd)_
 
 ---
 
 ## Screenshots
 
-_Add screenshots of API responses, Postman collections, or admin dashboard here_
 
 ## All Project
 
