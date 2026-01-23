@@ -237,6 +237,44 @@ _(Add Swagger documentation link here if implemented)_
 
 _Add screenshots of API responses, Postman collections, or admin dashboard here_
 
+## All Project
+
+![alt text](image.png)
+
+## Login
+
+![alt text](image-1.png)
+
+## Invite
+
+![alt text](image-2.png)
+
+## Invite User Registration
+
+![alt text](image-3.png)
+
+## User Status Update
+
+![alt text](image-4.png)
+
+
+## User Role Update
+
+![alt text](image-5.png)
+
+
+## Project Create
+
+![alt text](image-7.png)
+
+## Project Delete
+
+![alt text](image-9.png)
+
+## Project Update
+
+![alt text](image-8.png)
+
 ---
 
 ## Author & License
